@@ -1,24 +1,23 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, {useState} from "react";
+import Input from "./input.jsx";
+import ToDoList from "./toDoList.jsx";
 
 //create your first component
 const Home = () => {
+	const [tasks, setTasks] = useState([])
+	const handleTasks = (newTask) => {
+		setTasks([...tasks, newTask])
+	}
+	const handleDeleteClick = (i) => {
+		tasks.splice(i, 1)
+		setTasks([...tasks])
+		}
 	return (
 		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+			<h1>todos</h1>
+			<Input handleTasks={handleTasks}/>
+			<ToDoList tasks={tasks} handleDeleteClick={handleDeleteClick}/>
+			<div className="remainingItems">{tasks.length === 0 ? "No tasks, add a task" : tasks.length === 1 ? (tasks.length)+ " item left" : (tasks.length)+ " items left"}</div>
 		</div>
 	);
 };

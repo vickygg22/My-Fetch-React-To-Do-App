@@ -1,12 +1,76 @@
-
-/* 
-
-    You can write your own styles here...
+body{
+    background-color: rgb(250, 250, 250);
+}
+ul{
+    width: 450px;
+    margin: auto;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.080);
+}
+ul li {
+    border: 1px solid rgb(240, 240, 252);
+    list-style: none;
+    padding: 10px 10px 10px 30px;
+    display: flex;
+    font-size: 20px;
+    text-align: left;
+}
+input{
+    border: none;
+    width: 100%;
+}
+input:focus{
+    outline: none;
+}
+h1{
+    text-align: center;
+    color: rgb(250, 233, 242);
+    font-weight: lighter;
+    font-size: 80px;
+}
+.remainingItems{
+    margin-left: 458px;
+    border: 1px solid rgb(240, 240, 252);
+    width: 450px;
+    height: 40px;
+    padding: 5px 5px 5px 15px;
+    font-size: 15px;
+    font-weight: lighter;
+    background-color: white;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.080);
+}
+.remainingItems:before{
+    box-shadow: none;
+}
+span{
+    opacity: 0;
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
+span:hover{
+    color: rgb(153, 58, 58);
+    }
+li:hover span{
+    opacity: 1;
 
-*/
+}
+
+::placeholder{
+    color: rgb(180, 180, 180);
+    font-weight: lighter;
+}
+.input{
+    width: 450px;
+    margin: auto;
+    background-color: white;
+    padding: 0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.080);
+    border: 1px solid rgb(240, 240, 252);
+    list-style: none;
+    padding: 10px 10px 10px 30px;
+    display: flex;
+    font-size: 20px;
+}
+.divOfLis{
+    width: 95%;
+}
