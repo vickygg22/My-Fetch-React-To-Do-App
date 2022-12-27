@@ -74,3 +74,13 @@ li:hover span{
 .divOfLis{
     width: 95%;
 }
+.btn{
+    margin-top: 10px;
+    border: 1px solid grey;
+    background-color: rgb(221, 221, 221);
+
+}
+.btn:hover{
+    border: 1px solid grey;
+    background-color: rgb(185, 182, 182);   
+}
